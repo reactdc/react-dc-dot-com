@@ -52,9 +52,6 @@ class FourOhFour extends React.Component {
 	}
 }
 
-ReactDOM.render(<div>Hello world!</div>, document.getElementById("app"));
-
-
 ReactDOM.render((
 	<Router>
 		<Route path="/" component={App}>
