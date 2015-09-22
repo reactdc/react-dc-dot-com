@@ -3,7 +3,7 @@ import path from 'path';
 export default {
     devtool: 'cheap-module-eval-source-map',
     entry: [
-        './src/app/index.js'
+        './src/index.js'
     ],
     output: {
         path: path.join(__dirname, 'public'),
