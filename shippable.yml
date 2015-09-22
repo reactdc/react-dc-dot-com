@@ -30,7 +30,7 @@ before_install:
 # Create directories
 before_script:
   - mkdir -p ~/.aws
-  - echo '[profile reactdc]' > ~/.aws/config
+  - echo '[profile eb-cli]' > ~/.aws/config
   - echo "aws_access_key_id = $AWSAccessKeyId" >> ~/.aws/config
   - echo "aws_secret_access_key = $AWSSecretKey" >> ~/.aws/config
 
