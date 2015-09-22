@@ -1,0 +1,8 @@
+branch-defaults:
+  master:
+    environment: reactdc-master
+global:
+  application_name: reactdc-master
+  default_region: us-west-2
+  profile: eb-cli
+  sc: git
