@@ -14,7 +14,8 @@ branches:
 env:
   global:
     - AWSAccessKeyId=AKIAI5GVT7VFUV42AO3Q
-    - secure: dHhkaFTK+BCyrRnwPwpmxBBnAGl0eoxT2ld9ak7WLXWwDIaMUxDuQSuWttB2mJUqPvadmTGa6BZ4rUD1FY8SN7430AOt7qes5K/JQ9ex/aMIxsVVZQPzL25QY2VOW8xIKV+zXMbZgnoLiiUKC5rqF643CoM2raSQYFZXoQlS6xV7e88WF36Jbtvbn6ptnf2s3+/yycz5RLv1wOhBA6FsAqm/89uOUaFmq6wwhblg5arw7SyreSR/ezDRr9HgstLUId/KWBe23f9jUziBfMva40q3goD/EaXwGNbhw3u1Zs+Ds++UQu5hKB981bmu3uvIYBf2kztX6GnP7ZR5DBgfmg==
+    - secure: N8pQyP9leJvoK2g80sMHX5tpeMhdXFpga8VWAUExhRe9lz0XClYV3gBYDRD+KxXR85csvf9JiLVpGAXAajz0SarHsKuSO463kBy9CTI54MONQ342gQ3DYZFj3gmbTxR8K4VP6VKpv9sdoJ548zAx3ddoYzdnvzwpGJ037hy4hUzNYnfMdt615S2GV5AOU4yt3Drm6psw+8ya/2RJlQZy52cJ2BnJaNAIBRoQpf9RMAtS6Rh4L0yzb+oN1xdO9A7rjSRS1V1xqeO23VYzXlMAYS5ARJUDh/G6YqYkv8WUdWNUNPx7809vcSq5h9U2cJTyRWkUSNzgZzpXpEfSdgcn0g==
+
 # Notifications for minimal bombarding of builds via email
 notifications:
      email:
