@@ -19,6 +19,24 @@ AWS:
  aws_secret_access_key = << secret >>
  ```
 
+ when trying to manually deploy you should run `eb init` then make sure there
+ is a subfolder called `.elasticbeanstalk` with a `config.yml` that has:
+
+ ```
+ branch-defaults:
+   master:
+     environment: reactdc-master
+ global:
+   application_name: reactdc-master
+   default_ec2_keyname: null
+   default_platform: Node.js
+   default_region: us-west-2
+   profile: reactdc
+   sc: git
+```
+
+then type `eb deploy`
+
  - start the server with `npm start` which dumps AWS_PROFILE via command line
 
 ENVIRONMENT VARIABLES:
