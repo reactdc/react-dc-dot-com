@@ -13,9 +13,8 @@ branches:
 # The path for Xunit to output test reports
 env:
   global:
-    - AWSAccessKeyId=AKIAJSKBGDMZ2Y2UEYSA
-    - secure: ULk6E5hebb1E/FEMt5pcAx+at1AmCP/yNPhQc4cSHzUOcoe1Eh9lwVo4iLz2TFAt/+gjf+2YTm+KtlA+yI2GxCnxT6NbmfQ9MGxYfZPu+7StRqV3dxNOUp82NTl0q9ZxBMkQhfu/24B8fMUf/6Szxhwtilvn72bShCDRbcQvEhxVLPuQ3Qv/wgiCkXyVVr2GTlKGT9UTriOB7Hch2iDYrIlUDT08R0hkW5NBGQjtz15W2RwJQumNoNmgXoB21hk2zLiNkBsw+SGa+c01KWxY29kRnxMGpzoj1kuwosbng32JS1nmt31Pfyf3+n/zRNhG4EyA0YOmDKQg4t4UW7nWyQ==
-
+    - AWSAccessKeyId=AKIAI5GVT7VFUV42AO3Q
+    - secure: dHhkaFTK+BCyrRnwPwpmxBBnAGl0eoxT2ld9ak7WLXWwDIaMUxDuQSuWttB2mJUqPvadmTGa6BZ4rUD1FY8SN7430AOt7qes5K/JQ9ex/aMIxsVVZQPzL25QY2VOW8xIKV+zXMbZgnoLiiUKC5rqF643CoM2raSQYFZXoQlS6xV7e88WF36Jbtvbn6ptnf2s3+/yycz5RLv1wOhBA6FsAqm/89uOUaFmq6wwhblg5arw7SyreSR/ezDRr9HgstLUId/KWBe23f9jUziBfMva40q3goD/EaXwGNbhw3u1Zs+Ds++UQu5hKB981bmu3uvIYBf2kztX6GnP7ZR5DBgfmg==
 # Notifications for minimal bombarding of builds via email
 notifications:
      email:
@@ -30,7 +29,7 @@ before_install:
 # Create directories
 before_script:
   - mkdir -p ~/.aws
-  - echo '[profile eb-cli]' > ~/.aws/config
+  - echo '[profile reactdc]' > ~/.aws/config
   - echo "aws_access_key_id = $AWSAccessKeyId" >> ~/.aws/config
   - echo "aws_secret_access_key = $AWSSecretKey" >> ~/.aws/config
 
