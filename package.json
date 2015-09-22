@@ -4,6 +4,7 @@
   "description": "React DC's Website",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "build": "./node_modules/.bin/webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
