@@ -28,8 +28,11 @@
     "webpack": "^1.12.2"
   },
   "dependencies": {
+    "dotenv": "^1.2.0",
     "react": "^0.14.0-rc1",
     "react-dom": "^0.14.0-rc1",
-    "redux": "^3.0.0"
+    "redux": "^3.0.0",
+    "restify": "^4.0.3",
+    "twit": "^2.1.0"
   }
 }
