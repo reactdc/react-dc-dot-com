@@ -3,7 +3,7 @@ module.exports = function(server, Twitter) {
 		Twitter.get(
 			'search/tweets',
 			{
-				q: 'react',
+				q: 'react_dc',
 				count: 100
 			},
 			function(err, data, response) {

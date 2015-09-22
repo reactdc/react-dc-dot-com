@@ -1,6 +1,13 @@
+import request from 'superagent';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, Link } from 'react-router'
+
+request
+  .get('/api/v1.0/tweets')
+  .end(function(err, res){
+  	console.log(res);
+  });
 
 class App extends React.Component {
 	render() {
@@ -14,6 +21,9 @@ class App extends React.Component {
 					<li><Link to="/resources">Resources</Link></li>
 					<li><Link to="/doesn't exist">This Should 404</Link></li>
 				</ul>
+				<div>
+
+				</div>
 				{this.props.children}
 			</div>
 		)
