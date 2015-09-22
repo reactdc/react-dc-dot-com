@@ -31,7 +31,7 @@ server.get('/health', function (req, res) {
 });
 
 // Require routes for resources from App
-//require("./src/api/twitter")(server, twitter);
+require("./src/api/twitter")(server, twitter);
 
 // default route to serve index
 server.get('/', restify.serveStatic({
