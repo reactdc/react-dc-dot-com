@@ -19,7 +19,20 @@ AWS:
  aws_secret_access_key = << secret >>
  ```
 
- when trying to manually deploy you should run `eb init` then make sure there
+ - start the server with `npm start` which dumps AWS_PROFILE via command line
+
+ENVIRONMENT VARIABLES:
+ - create a `.env` file with the following entries:
+
+ ```
+ OAUTH_KEY=<< twitter key >>
+ OAUTH_SECRET=<< twitter secret >>
+ API_HOST=http://localhost:3000
+ ```
+
+## DEPLOYMENT
+
+ When trying to manually deploy you should run `eb init` then make sure there
  is a subfolder called `.elasticbeanstalk` with a `config.yml` that has:
 
  ```
@@ -36,14 +49,3 @@ AWS:
 ```
 
 then type `eb deploy`
-
- - start the server with `npm start` which dumps AWS_PROFILE via command line
-
-ENVIRONMENT VARIABLES:
- - create a `.env` file with the following entries:
-
- ```
- OAUTH_KEY=<< twitter key >>
- OAUTH_SECRET=<< twitter secret >>
- API_HOST=http://localhost:3000
- ```
