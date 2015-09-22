@@ -13,8 +13,8 @@ branches:
 # The path for Xunit to output test reports
 env:
   global:
-    - AWSAccessKeyId=AKIAI5GVT7VFUV42AO3Q
-    - secure: N8pQyP9leJvoK2g80sMHX5tpeMhdXFpga8VWAUExhRe9lz0XClYV3gBYDRD+KxXR85csvf9JiLVpGAXAajz0SarHsKuSO463kBy9CTI54MONQ342gQ3DYZFj3gmbTxR8K4VP6VKpv9sdoJ548zAx3ddoYzdnvzwpGJ037hy4hUzNYnfMdt615S2GV5AOU4yt3Drm6psw+8ya/2RJlQZy52cJ2BnJaNAIBRoQpf9RMAtS6Rh4L0yzb+oN1xdO9A7rjSRS1V1xqeO23VYzXlMAYS5ARJUDh/G6YqYkv8WUdWNUNPx7809vcSq5h9U2cJTyRWkUSNzgZzpXpEfSdgcn0g==
+    - AWSAccessKeyId=AKIAJSKBGDMZ2Y2UEYSA
+    - secure: ULk6E5hebb1E/FEMt5pcAx+at1AmCP/yNPhQc4cSHzUOcoe1Eh9lwVo4iLz2TFAt/+gjf+2YTm+KtlA+yI2GxCnxT6NbmfQ9MGxYfZPu+7StRqV3dxNOUp82NTl0q9ZxBMkQhfu/24B8fMUf/6Szxhwtilvn72bShCDRbcQvEhxVLPuQ3Qv/wgiCkXyVVr2GTlKGT9UTriOB7Hch2iDYrIlUDT08R0hkW5NBGQjtz15W2RwJQumNoNmgXoB21hk2zLiNkBsw+SGa+c01KWxY29kRnxMGpzoj1kuwosbng32JS1nmt31Pfyf3+n/zRNhG4EyA0YOmDKQg4t4UW7nWyQ==
 
 # Notifications for minimal bombarding of builds via email
 notifications:
