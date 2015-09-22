@@ -21,7 +21,6 @@ notifications:
      email:
          recipients:
              - fogle.george@gmail.com
-			 - rickywvetter@gmail.com
          on_success: always
          on_failure: always
 
