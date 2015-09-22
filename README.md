@@ -13,7 +13,7 @@ AWS:
  - create a file `nano ~/.aws/config` with contents:
 
  ```
- [profile dtw]
+ [profile reactdc]
  region = us-west-2
  aws_access_key_id = << key >>
  aws_secret_access_key = << secret >>
