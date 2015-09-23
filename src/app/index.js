@@ -3,54 +3,29 @@ import ReactDOM from 'react-dom';
 import { Router, Route, Link } from 'react-router';
 import Twitter from './twitter';
 
-class App extends React.Component {
-	render() {
-		return (
-			<div>
-				<header>
-					<h1>React DC</h1>
-				</header>
-				<ul>
-					<li><Link to="/about">About Us</Link></li>
-					<li><Link to="/resources">Resources</Link></li>
-					<li><Link to="/doesn't exist">This Should 404</Link></li>
-				</ul>
-				<Twitter/>
-				{this.props.children}
-			</div>
-		)
-	}
+const App = (props) => {
+	return (
+		<div>
+			<header>
+				<h1>React DC</h1>
+			</header>
+			<ul>
+				<li><Link to="/about">About Us</Link></li>
+				<li><Link to="/resources">Resources</Link></li>
+				<li><Link to="/doesn't exist">This Should 404</Link></li>
+			</ul>
+			<Twitter />
+			{props.children}
+		</div>
+	);
 }
 
-class About extends React.Component {
-	render() {
-		return (
-			<div>
-				About Us
-			</div>
-		)
-	}
-}
 
-class Resources extends React.Component {
-	render() {
-		return (
-			<div>
-				Resources
-			</div>
-		)
-	}
-}
+const About = (props) => <div>About Us</div>;
 
-class FourOhFour extends React.Component {
-	render() {
-		return (
-			<div>
-				404
-			</div>
-		)
-	}
-}
+const Resources = (props) => <div>Resources</div>;
+
+const FourOhFour = (pops) => <div>404</div>;
 
 ReactDOM.render((
 	<Router>
