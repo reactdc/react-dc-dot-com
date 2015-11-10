@@ -1,0 +1,54 @@
+body {
+	 position: absolute;
+	 top: 0px;
+	 height: 100%;
+	 width: 100%;
+	 padding: 0px;
+	 margin: 0px;
+}
+
+.rdc-header {
+	background-color: #222222;
+	color: #FFFFFF;
+}
+
+.rdc-header h1 {
+	margin: 0px;
+	padding: 5px 10px;
+}
+
+.rdc-menu {
+	margin: 0px;
+	padding: 0px;
+	background-color: #555555;
+	color: #FFFFFF;
+}
+
+.rdc-menu {
+	padding: 10px;
+}
+
+.rdc-menu li {
+	padding: 5px 10px;
+	display: inline;
+}
+
+.rdc-menu li a {
+	color: #FFFFFF;
+}
+
+.rdc-tweets {
+	float: right;
+	width: 400px;
+	padding: 10px;
+}
+
+.rdc-tweet {
+	background-color: #e1e1e1;
+	margin: 5px 0px;
+	padding: 7px;
+}
+
+.rdc-content {
+	padding: 0px 10px;
+}

@@ -6,10 +6,10 @@ import Twitter from './twitter';
 const App = (props) => {
 	return (
 		<div>
-			<header>
+			<header className="rdc-header">
 				<h1>React DC</h1>
 			</header>
-			<ul>
+			<ul className="rdc-menu">
 				<li><Link to="/about">About Us</Link></li>
 				<li><Link to="/resources">Resources</Link></li>
 				<li><Link to="/doesn't exist">This Should 404</Link></li>
@@ -21,11 +21,11 @@ const App = (props) => {
 }
 
 
-const About = (props) => <div>About Us</div>;
+const About = (props) => <div className="rdc-content"><h2>About Us</h2></div>;
 
-const Resources = (props) => <div>Resources</div>;
+const Resources = (props) => <div className="rdc-content"><h2>Resources</h2></div>;
 
-const FourOhFour = (pops) => <div>404</div>;
+const FourOhFour = (pops) => <div className="rdc-content"><h2>404</h2></div>;
 
 ReactDOM.render((
 	<Router>
