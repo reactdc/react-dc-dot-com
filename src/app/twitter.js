@@ -16,8 +16,8 @@ export default class Twitter extends React.Component {
  	}
  	render(){
  		let tweets = this.state.tweets.map(function(tweet){
- 			return <div>{tweet.text}</div>
+ 			return <div className="rdc-tweet">{tweet.text}</div>
  		});
- 		return <div>{tweets}</div>
+ 		return <div className="rdc-tweets"><h3>@React_DC</h3>{tweets}</div>
  	}
  }
