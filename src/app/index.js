@@ -1,38 +1,42 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Router, Route, Link } from 'react-router';
-import Twitter from './twitter';
+import { Router, Route } from 'react-router';
+import { App, About, Resources, Http404 } from "./components/containers";
 
-const App = (props) => {
-	return (
-		<div>
-			<header className="rdc-header">
-				<h1>React DC</h1>
-			</header>
-			<ul className="rdc-menu">
-				<li><Link to="/about">About Us</Link></li>
-				<li><Link to="/resources">Resources</Link></li>
-				<li><Link to="/doesn't exist">This Should 404</Link></li>
-			</ul>
-			<Twitter />
-			{props.children}
-		</div>
-	);
+import { compose, createStore, combineReducers, applyMiddleware } from "redux";
+import { Provider } from "react-redux";
+import thunk from "redux-thunk";
+import * as reducers from "./reducers";
+
+const logger = store => next => action => {
+	console.group(action.type);
+	console.info("dispatching", action);
+	const result = next(action);
+	console.log("next state", store.getState());
+	console.groupEnd(action.type);
+	return result;
 }
 
+const reducer = combineReducers(reducers);
+const finalCreateStore = compose(
+	applyMiddleware(
+		thunk,
+		logger
+	)
+)(createStore);
+const store = finalCreateStore(reducer);
 
-const About = (props) => <div className="rdc-content"><h2>About Us</h2></div>;
-
-const Resources = (props) => <div className="rdc-content"><h2>Resources</h2></div>;
-
-const FourOhFour = (pops) => <div className="rdc-content"><h2>404</h2></div>;
-
-ReactDOM.render((
+const routes = (
 	<Router>
-		<Route path="/" component={App}>
-			<Route path="about" component={About}/>
-			<Route path="resources" component={Resources}/>
-			<Route path="*" component={FourOhFour}/>
+		<Route path="/" component={ App }>
+			<Route path="about" component={ About }/>
+			<Route path="resources" component={ Resources }/>
+			<Route path="*" component={ Http404 }/>
 		</Route>
 	</Router>
-), document.getElementById("app"));
+);
+
+ReactDOM.render(
+	<Provider store={ store }>
+		{ routes }
+	</Provider>,
+	document.getElementById("app")
+);
