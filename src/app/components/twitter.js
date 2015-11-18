@@ -1,20 +1,13 @@
 import request from 'superagent';
+import { connect } from "react-redux";
+import { fetchTweets } from "../actions";
 
-export default class Twitter extends React.Component {
-	constructor(props){
-		super(props)
-		this.state = {tweets: []}
-	}
+class Twitter extends React.Component {
 	componentDidMount(){
-		request
-			.get('/api/v1.0/tweets')
-			.end((err, res)=>{
-				console.log(res.body);
-				this.setState({tweets: res.body});
-			});
+		this.props.dispatch(fetchTweets());
 	}
 	render(){
-		let tweets = this.state.tweets.map(function(tweet){
+		let tweets = this.props.tweets.map(function(tweet){
 			return (
 				<div
 					key={ tweet.id }
@@ -26,3 +19,7 @@ export default class Twitter extends React.Component {
 		return <div className="rdc-tweets"><h3>@React_DC</h3>{tweets}</div>
 	}
 }
+
+export default connect(state => ({
+	tweets: state.tweets
+}))(Twitter);
