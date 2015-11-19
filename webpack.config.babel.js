@@ -32,6 +32,11 @@ export default {
                 loaders: [
                     'babel-loader?{"stage":0,"plugins":["object-assign"]}'
                 ]
+            },
+            {
+                test: /\.less/,
+                exclude: /node_modules/,
+                loaders: [ 'style', 'css', 'less' ]
             }
         ]
     }

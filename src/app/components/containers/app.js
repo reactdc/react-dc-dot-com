@@ -1,12 +1,13 @@
+import './app.less';
+
 import { Link } from "react-router";
 import Twitter from "../twitter";
+import { AppBar, FlatButton, IconMenu, MenuItem, IconButton } from "material-ui";
 
 export default function App(props) {
 	return (
 		<div>
-			<header className="rdc-header">
-				<h1>React DC</h1>
-			</header>
+			<AppBar title="React DC"/> 
 			<ul className="rdc-menu">
 				<li><Link to="/about">About Us</Link></li>
 				<li><Link to="/resources">Resources</Link></li>
