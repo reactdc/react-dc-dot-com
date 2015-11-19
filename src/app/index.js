@@ -1,5 +1,5 @@
 import { Router, Route } from 'react-router';
-import { App, About, Resources, Http404 } from "./components/containers";
+import { App, About, Resources, Http404, TalkSubmission } from "./components/containers";
 
 import { compose, createStore, combineReducers, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
@@ -29,6 +29,7 @@ const routes = (
 		<Route path="/" component={ App }>
 			<Route path="about" component={ About }/>
 			<Route path="resources" component={ Resources }/>
+			<Route path="submit-a-talk" component={ TalkSubmission }/>
 			<Route path="*" component={ Http404 }/>
 		</Route>
 	</Router>
